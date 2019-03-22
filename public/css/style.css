@@ -1,0 +1,385 @@
+/* YOUR CUSTOM STYLES */
+/* html {zoom: 90%;} */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* YOUR CUSTOM STYLES */
+/* html {zoom: 90%;} */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.hp-post-data {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.list-comments img {
+    width: 50px;
+}
+.sidebar-posts .media img {
+    width: 100px;
+}
+
+.card {
+  margin: 0 auto;
+}
+.card .carousel-item {
+  height: 235px;
+}
+.card .carousel-caption {
+  padding: 0;
+  right: 0;
+  left: 0;
+  color: #3d3d3d;
+}
+.card .carousel-caption h3 {
+  color: #3d3d3d;
+}
+.card .carousel-caption p {
+  line-height: 30px;
+}
+.card .carousel-caption .col-sm-3 {
+  display: flex;
+  align-items: center;
+}
+.card .carousel-caption .col-sm-9 {
+  text-align: left;
+}
+
+.navi a {
+  text-decoration:none;
+}
+a > .ico {
+  background-color: grey;
+  padding: 10px;
+}
+
+a:hover > .ico {
+  background-color: #666;
+}
+
+.carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+  width: 0px;
+  height: 0px;
+}
+
+.carousel-inner-my {
+  height: 235px;
+  margin-top: 20px;
+}
+
+/* not active */
+.nav-item .nav-link:not(.active) {
+  color: #ff6f00;
+}
+/* 
+.nav-pills .pill-2 .nav-link:not(.active) {
+  color: #ff6f00;
+}
+
+.nav-pills .pill-3 .nav-link:not(.active) {
+
+  color: #ff6f00;
+} */
+
+/* background-color: #616161!important; */
+
+.news-header .nh-image {
+  float: left;
+  min-width: 50px;
+  margin: 0px 10px 0px 20px;
+}
+
+a img {
+  border: 0;
+}
+
+.news-header .nh-title, .news-header .nh-title a {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: Signika, Georgia, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.news-header .nh-title a {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: Signika, Georgia, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.team-card
+{
+  font-family: 'Josefin Sans', sans-serif;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%,-50%); */
+  width: 100%;
+  height: 304px;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.team-card .front
+{
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  background: #000;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.team-card:hover .front
+{
+  transform: rotateX(-180deg);
+}
+
+.team-card .back
+{
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  background: #000;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+}
+
+.team-card .back:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1)
+}
+
+.team-card:hover .back
+{
+  transform: rotateX(0deg);
+}
+
+.team-card .back .details
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.team-card .back .details h2
+{
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.team-card .back .details h2 span
+{
+  color: #a7a7a7;
+  font-size: 16px;
+}
+
+.social-icons
+{
+  padding: 10px 0;
+}
+
+.social-icons a
+{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  background: #262626;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.social-icons a .fa
+{
+  line-height: 36px;
+}
+.social-icons a:hover
+{
+  background: #e91e63;
+}
+.swiper-container {
+  width: 100%;
+  /* padding-top: 200px; */
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 380px;
+  background: #fff;
+}
+.swiper-slide .imgBx
+{
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.swiper-slide .imgBx img
+{
+  width: 100%;
+}
+
+.swiper-slide .details
+{
+  box-sizing: border-box;
+  padding: 20px;
+  /* background: #262626; */
+}
+.swiper-slide .details h3
+{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.swiper-slide .details h3 span
+{
+  font-size: 16px;
+  color: #f44336;
+}
+
+.center
+{
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/rhinocupchampionsleaguemz.appspot.com/o/rhino_news%2Fsabie.jpg?alt=media&token=e5f42e79-d4f1-4ea7-a33f-20f07c62797f");
+  background-size: 100%;
+  /* position: absolute; */
+  /* top: 50%; */
+  width: 100%;
+  /* transform: translateY(100%); */
+  text-align: center;
+  /* height: 100%; */
+  padding: 121px 0;
+  border: 2px solid #c6c6c6;
+  
+}
+h1
+{
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;;
+  top: 100%;
+}
+h1 span
+{
+  font-size: 21px;
+  /* line-height: .4em; */
+  font-weight: 800;
+}
+#clock
+{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .center {
+    
+  }
+}
+#clock div
+{
+  position: relative;
+  width: 50px;
+  padding: 5px;
+  margin: 0 5px;
+  background: #262626;
+  color: #fff;
+  border: 2px solid #000;
+}
+#clock div:last-child
+{
+  background: #ff6d00;
+}
+#clock div:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, .2);
+}
+#clock div span
+{
+  display: block;
+  text-align: center;
+}
+#clock div span:nth-child(1)
+{
+  font-size: 14px;
+  font-weight: 800;
+}
+#clock div span:nth-child(2)
+{
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: -5px;
+}
+
+/* #basic-automation-wrapper
+{
+  border: 2px solid #000;
+} */
+
+.clube_details p span, .detalhe_clube_historia .separador_clube {
+  text-transform: uppercase;
+  font-family: Rubik-Medium,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+
+.clube_details p {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.clube_details p span {
+  font-size: 12px;
+  color: #ff6d00;
+}
+
+.map-container-5{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-5 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.video-fluid {
+  width: 100%;
+  height: 100%;
+}

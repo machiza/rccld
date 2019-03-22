@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wild and Free Rhino Cup Champions League</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Place BrandFlow script here -->
+
+    <!-- Place BrandFlow script here -->
+
+    <link rel="icon" type="image/png" href="/img/png/logo.png" />
+</head>
+
+<body>
+    {{> header }}
+    
+    <!--Main layout-->
+    <main>
+        {{!-- <div class="container mt-4"> --}}
+            {{{body}}}
+        {{!-- </div> --}}
+    </main>
+    <!--Main layout-->
+
+    {{> footer }}
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/js/mdb.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script>
+        $('#myTab a').on('click', function (e) {
+            $('.tab-pane').removeClass('active');
+            e.preventDefault()
+            $(this).tab('show');
+            $('.carousel-item-a').addClass('active');
+        });
+
+        $('#clock').countdown('2019/04/06', function(event) {
+            var $this = $(this).html(event.strftime(''
+                +'<div><span>%w</span><span>Weeks</span></div>'
+                +'<div><span>%d</span><span>Days</span></div>'
+                +'<div><span>%H</span><span>Hr</span></div>'
+                +'<div><span>%M</span><span>Min</span></div>'
+                +'<div><span>%S</span><span>Sec</span></div>'
+                )
+            );
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          initialSlide: 7,
+          coverflowEffect: {
+            rotate: 60,
+            stretch: 0,
+            depth: 300,
+            modifier: 1,
+            slideShadows : true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+        
+    </script>
+</body>
+
+</html>

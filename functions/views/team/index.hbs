@@ -1,0 +1,198 @@
+<div class="container-fluid">
+    <section>
+        <ul class="nav justify-content-center grey lighten-4">
+            {{#each equipes }}
+                <li class="nav-item"><a href="/team/{{ id }}" class="nav-link">
+                    <img width="32" src="{{emblema}}" alt="CORUMAMA FC" title="{{ nome_curto }}">
+                </a></li>
+            {{/each}}
+        </ul>
+    </section>
+</div>
+
+<div class="container mt-4">
+    
+    <div class="divider-new mt-4 mb-4">
+        <h2 class="h3-responsive">
+            <strong>TEAM</strong>
+        </h2>
+    </div>
+
+    <!--Section: Intro-->
+    <section>
+        <div class="row">
+            <div class="col-lg-6 mt-5">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="{{ equipe.emblema }}" alt="thumbnail"
+                        style="width: 200px; height: 200px;" class="justify-content-center">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="clube_details">
+                            <h2>{{ equipe.nome_curto }}</h2>
+                            <p><span>Founded on:</span> 28/02/1904 00:00:00</p>
+                            <p><span>Stadium:</span> Campo de Corumana</p>
+                            <p><span>Phone:</span> 847777777</p>
+                            <p><span>President:</span> {{ equipe.presidente }}</p>
+                            <p><span>Coach:</span> {{ equipe.treinador }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="front">
+                        <img src="{{ equipe.foto }}" class="front img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="back">
+                        <div class="details">
+                            <h2>{{ equipe.nome }}<br><span>{{ equipe.sigla }}</span></h2>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--Section: Intro-->
+
+    <div class="divider-new mt-4 mb-4">
+        <h2 class="h3-responsive">
+            <strong>SQUAD</strong>
+        </h2>
+    </div>
+
+    <!--Section: Posts-->
+    <section class="text-center">
+
+        <!--Grid row-->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {{#each equipe.jogdores}}
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="{{ foto }}" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>{{ nome }}<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{!-- <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Alfredo Cesar.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Alfredo Cesar<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Artur Bula.JPG" class="img-fluid" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Artur Bula<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Bento Massango.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Bento Massango<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Corrane Mauricio.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Corrane Mauricio<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Cristo Moiane.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Cristo Moiane<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Dercio Antonio Wate.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Dercio Antonio Wate<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Elfasse Chavango.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Elfasse Chavango<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Fabiao Dinis.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Fabiao Dinis<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Lorenco Jose.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Lorenco Jose<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Luis Dembele.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Luis Dembele<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Manuel Mauricio.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Manuel Mauricio<br><span>Player</span></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="img/corrumana/Miguel Marcano.JPG" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Miguel Marcano<br><span>Player</span></h3>
+                            </div>
+                        </div> --}}
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            
+        </div>
+        <!--Grid row-->
+
+    </section>
+    <!--Section: Posts-->
+</div>
