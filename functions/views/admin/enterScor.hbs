@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <div class="row">
+          <div class="col-sm-4 text-left">previous round</div>
+          <div class="col-sm-4">
+            <h4 class="card-title text-center">ROUND 1</h4>
+          </div>
+          <div class="col-sm-4 text-right">next round</div>
+        </div>
+        
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table id="tablemarcador" class="match-list">
+            {{!-- <thead class=" text-primary">
+              <tr>
+                <th width="20%"></th>
+                <th width="28%" style="text-align:right"></th>
+                <th width="4%" style="text-align:center"></th>
+                <th width="28%" style="text-align:left"></th>
+                <th width="20%"></th>
+              </tr>
+            </thead> --}}
+            <tbody id="dados">
+              {{#each rounds.games.games }}
+              <tr>
+                <td class="time">{{ home.name }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Button trigger modal -->
+{{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> --}}
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $("li.active").removeClass('active');
+  $("li.enter-scor").addClass('active');
+  //$('button').hide();
+  var round = 0;
+
+  var tablaDados = $("#dados");
+ // $("#dados").empty();
+
+  //$.get("/enter_scores/1", function( res ) {
+ //   console.log(res.games);
+   // $(res.games.games).each(function(key,value) {
+     // var dateString = moment.unix(value.data._seconds).format("dddd DD MMMM");
+      //var timeString = moment.unix(value.data._seconds).format("H:mm");
+      //tablaDados.append("<tr>"
+       /// +"<td class='time'>"+dateString+"</td>"
+       // +"<td class='team-home' style='text-align:right'>"+value.home.name+" <img class='ml-1' src='"+value.home.shield+"' alt='John said' style='width: 20px;'></td>"
+        //+"<td class='score' style='text-align:center'><span class='py-1 px-3' style='background:#000; color:#fff'>"+timeString+"<span></td>"
+      //  +"<td style='text-align:left'><img class='mr-1' src='"+value.guest.shield+"' alt='John said' style='width: 20px;'> "+value.guest.name+"</td>"
+     //   +"<td style='text-align:right'>STATUS</td>"+
+    //    "</tr>")
+   // });
+ // });
+
+  function enterResult(home, guest) {
+    console.log(home+" vs "+guest);
+
+    //$.ajax({
+    //  type: 'POST',
+    //  url: '/enter_scores',
+    //  data: { 
+    //      home 
+    //    },
+    //  success: function(data) {
+    //    console.log(data);
+    //  }
+    //});
+  }
+
+  //$(window).resize(function(){
+
+    if ($(window).width() <= 640) {  
+      console.log('sim!');
+      $('td.time').css({'order':'1','width':'100%','position':'relative','height':'19px'});
+    }     
+
+  //});
+
+
+
+  
+
+  $('.change').css('padding','0');
+  $('.btn.btn-sm').css('margin','0px');
+</script>

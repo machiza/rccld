@@ -3,12 +3,13 @@ var admin = require("firebase-admin");
 const express = require('express');
 // const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
+const vue = require("vue");
 
-var serviceAccount = require("./serviceAccountKey.json");
+// var serviceAccount = require("./serviceAccountKey.json");
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://rhinocupchampionsleaguemz.firebaseio.com"
+//   credential: admin.credential.cert(serviceAccount),
+//   databaseURL: "https://rhinocupchampionsleaguemz.firebaseio.com"
 });
 
 // function getEquipes() {
@@ -50,6 +51,11 @@ app.get('/', (request, response) => {
     
     
 });
+app.get('/about', (request, response) => {
+    response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    response.render()
+    
+});
 
 app.get('/team/:id', (request, response) => {
     response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
@@ -84,6 +90,57 @@ app.get('/team/:id', (request, response) => {
 app.get('/team', (request, response) => {
     response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
     response.render('tema.index');
+});
+
+app.get('/admin', (request, response) => {
+    response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    response.render('admin/index', { layout: 'admin' });
+});
+
+app.get('/enter_scores', (request, response) => {
+    db.collection("rounds").doc("1").get().then(doc => {
+        rounds = {
+            id: doc.id,
+            games: doc.data()
+        }
+        response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+        response.render('admin/enterScor', { layout: 'admin', rounds });
+    });
+    // response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    // response.render('admin/enterScor', { layout: 'admin', rounds });
+});
+
+app.get('/enter_scores/:id', (request, response) => {
+    round = {};
+    db.collection("rounds").doc("1").get().then(doc => {
+        // snapshot.forEach(doc => {
+            // console.log(doc.emblema);
+            rounds = {
+                id: doc.id,
+                games: doc.data()
+            }
+        // });
+        // response.send(equipes);
+        response.send(rounds);
+    }); 
+});
+
+app.post('/enter_scores', (request, response) => {
+    var stringHome = "home."+request.body.home;
+    var casaRef = db.collection("rounds").where("round","==",1).where("games", "array-contains", stringHome);
+    
+    // casaRef.update(
+    //     {"games":
+    //         home.name.arrayUnion("sim")
+    // });
+
+    db.collection("rounds").doc("1")
+        .set(
+        { games: [ { home : { casa : 0} } ] },
+        { merge: false }
+    )
+
+    response.send("successfully");
 });
 
 exports.app = functions.https.onRequest(app);

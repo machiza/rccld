@@ -1,0 +1,95 @@
+.partida .equipe-casa, .partida .jogador-casa{
+	text-align: right;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;	
+    display: list-item;
+    list-style: none;
+}
+
+.partida .equipe-fora, .partida .jogador-fora{
+	text-align: left;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: list-item;
+}
+
+.partida .equipe-casa, .partida .equipe-fora, .partida .jogador-fora, .partida .jogador-casa{
+	width: 40%;
+    padding: 0;
+}
+
+.partida .equipe-casa, .partida .equipe-fora{
+	padding-top: 5px;
+}
+
+
+
+
+.partida .placar, .partida .confirmar{
+/*	max-width: 90px; */
+    margin: auto;
+    text-align: center;
+    width: 20%;
+    padding: 0;
+}
+
+.partida .x-placar{
+	margin-top: -40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.partida .confirmar{
+	padding: 10px 11px;
+    padding-bottom: 0;
+}
+
+.partida .confirmar .btn{
+	visibility: hidden;
+}
+
+.partida .jogador-fora, .partida .jogador-casa, .partida .confirmar{
+	margin-top: -12px;
+}
+
+
+input.gols{
+	
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 0;
+	padding-right: 0;
+	font-weight: bold;
+	font-size: 12pt;
+	width: 32px;
+	margin-bottom: 10px;	
+}
+
+
+
+
+input.gols[disabled]{
+	border: 1px white solid;
+	color: #000 !important;
+	background: #f8f8f8;
+}
+
+/* .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 20px 8px;
+    vertical-align: middle;
+    border-color: #ddd;
+}	 */
+
+@media (max-width: 640px) {
+	table#tablemarcador.match-list td.time {
+		order: 1;
+		width: 100%;
+		position: relative;
+		height: 19px;
+	}
+
+}

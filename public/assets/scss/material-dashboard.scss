@@ -1,0 +1,139 @@
+/*!
+
+ =========================================================
+ * Material Dashboard - v2.1.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-dashboard
+ * Copyright 2018 Creative Tim (http://www.creative-tim.com)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+ @import "material-dashboard/variables";
+ @import "material-dashboard/mixins";
+ @import "material-dashboard/core-bootstrap";
+
+ // Core Components
+ @import "material-dashboard/buttons";
+ @import "material-dashboard/checkboxes";
+ @import "material-dashboard/radios";
+ @import "material-dashboard/forms";
+ @import "material-dashboard/input-group";
+ @import "material-dashboard/images";
+ @import "material-dashboard/navbar";
+ @import "material-dashboard/alerts";
+ @import "material-dashboard/headers";
+ @import "material-dashboard/type";
+ @import "material-dashboard/tabs";
+ @import "material-dashboard/tooltip";
+ @import "material-dashboard/popover";
+ @import "material-dashboard/dropdown";
+ @import "material-dashboard/togglebutton";
+ @import "material-dashboard/ripples";
+ @import "material-dashboard/footers";
+ @import "material-dashboard/sidebar-and-main-panel";
+ @import "material-dashboard/fixed-plugin";
+ @import "material-dashboard/tables";
+ @import "material-dashboard/misc";
+ @import "material-dashboard/social-buttons";
+
+@import "material-dashboard/cards";
+@import "material-dashboard/cards/card-stats";
+@import "material-dashboard/cards/card-profile";
+@import "material-dashboard/cards/card-plain";
+
+ //plugin scss
+ @import "material-dashboard/plugins/animate";
+ @import "material-dashboard/plugins/chartist";
+ @import "material-dashboard/plugins/perfect-scrollbar";
+
+ @import "material-dashboard/responsive";
+
+//  .li.active>a {
+//     background-color: #9c27b0;
+//     box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+//  }
+
+.partida .equipe-casa, .partida .jogador-casa{
+	text-align: right;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;	
+    display: list-item;
+    list-style: none;
+}
+
+.partida .equipe-fora, .partida .jogador-fora{
+	text-align: left;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: list-item;
+}
+
+.partida .equipe-casa, .partida .equipe-fora, .partida .jogador-fora, .partida .jogador-casa{
+	width: 40%;
+    padding: 0;
+}
+
+.partida .equipe-casa, .partida .equipe-fora{
+	padding-top: 5px;
+}
+
+
+
+
+.partida .placar, .partida .confirmar{
+/*	max-width: 90px; */
+    margin: auto;
+    text-align: center;
+    width: 20%;
+    padding: 0;
+}
+
+.partida .x-placar{
+	margin-top: -40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.partida .confirmar{
+	padding: 10px 11px;
+    padding-bottom: 0;
+}
+
+.partida .confirmar .btn{
+	visibility: hidden;
+}
+
+.partida .jogador-fora, .partida .jogador-casa, .partida .confirmar{
+	margin-top: -12px;
+}
+
+
+input.gols{
+	
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 0;
+	padding-right: 0;
+	font-weight: bold;
+	font-size: 12pt;
+	width: 32px;
+	margin-bottom: 10px;	
+}
+
+
+
+
+input.gols[disabled]{
+	border: 1px white solid;
+	color: #000 !important;
+	background: #f8f8f8;
+}
